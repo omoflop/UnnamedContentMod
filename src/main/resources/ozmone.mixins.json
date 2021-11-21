@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.moon.ozmone.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "AbstractMinecartEntityAccessorMixin",
+    "RailPlacementHelperMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "shape=east_west,powered=false,waterlogged=false": {
+      "model": "ozmone:block/attachment_rail",
+      "y": 90
+    },
+    "shape=north_south,powered=false,waterlogged=false": {
+      "model": "ozmone:block/attachment_rail"
+    },
+    "shape=east_west,powered=true,waterlogged=false": {
+      "model": "ozmone:block/attachment_rail_powered",
+      "y": 90
+    },
+    "shape=north_south,powered=true,waterlogged=false": {
+      "model": "ozmone:block/attachment_rail_powered"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "variants": {
+    "rotation=0": {
+      "model": "ozmone:block/reflector_90",
+      "uvlock": true
+    },
+    "rotation=1": {
+      "model": "ozmone:block/reflector_22",
+      "uvlock": true
+    },
+    "rotation=2": {
+      "model": "ozmone:block/reflector_45",
+      "uvlock": true
+    },
+    "rotation=3": {
+      "model": "ozmone:block/reflector_67",
+      "uvlock": true
+    },    
+    "rotation=4": {
+      "model": "ozmone:block/reflector_90",
+      "uvlock": true,
+      "y": 90
+    },
+    "rotation=5": {
+      "model": "ozmone:block/reflector_22",
+      "uvlock": true,
+      "y": 90
+    },
+    "rotation=6": {
+      "model": "ozmone:block/reflector_45",
+      "uvlock": true,
+      "y": 90
+    },
+    "rotation=7": {
+      "model": "ozmone:block/reflector_67",
+      "uvlock": true,
+      "y": 90
+    }
+  }
+}

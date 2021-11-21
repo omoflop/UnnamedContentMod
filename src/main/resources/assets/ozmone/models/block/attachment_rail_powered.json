@@ -1,0 +1,7 @@
+{
+	"parent": "ozmone:block/attachment_rail",
+	"textures": {
+		"1": "ozmone:block/attachment_rail_top_open",
+		"particle": "ozmone:block/attachment_rail_top_open"
+	}
+}
