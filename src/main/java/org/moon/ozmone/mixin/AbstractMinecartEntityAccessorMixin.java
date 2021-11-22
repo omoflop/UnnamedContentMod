@@ -13,4 +13,25 @@ public interface AbstractMinecartEntityAccessorMixin {
         return null;
     }
 
+    @Accessor("clientX") double getClientX();
+    @Accessor("clientY") double getClientY();
+    @Accessor("clientZ") double getClientZ();
+    @Accessor("clientYaw") double getClientYaw();
+    @Accessor("clientPitch") double getClientPitch();
+    @Accessor("clientXVelocity") double getClientXVelocity();
+    @Accessor("clientYVelocity") double getClientYVelocity();
+    @Accessor("clientZVelocity") double getClientZVelocity();
+    @Accessor("clientInterpolationSteps") int getClientInterpolationSteps();
+
+    @Accessor("clientX") void setClientX(double value);
+    @Accessor("clientY") void setClientY(double value);
+    @Accessor("clientZ") void setClientZ(double value);
+    @Accessor("clientYaw") void setClientYaw(double value);
+    @Accessor("clientPitch") void setClientPitch(double value);
+    @Accessor("clientXVelocity") void setClientXVelocity(double value);
+    @Accessor("clientYVelocity") void setClientYVelocity(double value);
+    @Accessor("clientZVelocity") void setClientZVelocity(double value);
+    @Accessor("clientInterpolationSteps") void setClientInterpolationSteps(int value);
+
+
 }

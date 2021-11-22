@@ -1,10 +1,10 @@
-package org.moon.ozmone.content.block.iface;
+package org.moon.ozmone.content.common.block.iface;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.moon.ozmone.content.block.MachineBlock;
+import org.moon.ozmone.content.common.block.MachineBlock;
 
 public interface IActivatable<T extends MachineBlock> {
     BooleanProperty ACTIVE = BooleanProperty.of("active");

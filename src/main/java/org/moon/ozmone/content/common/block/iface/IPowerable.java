@@ -1,4 +1,4 @@
-package org.moon.ozmone.content.block.iface;
+package org.moon.ozmone.content.common.block.iface;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.state.property.BooleanProperty;

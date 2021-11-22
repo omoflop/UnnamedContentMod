@@ -1,4 +1,4 @@
-package org.moon.ozmone.content;
+package org.moon.ozmone.content.common;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.BlockItem;

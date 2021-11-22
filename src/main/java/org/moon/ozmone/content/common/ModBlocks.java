@@ -1,9 +1,9 @@
-package org.moon.ozmone.content;
+package org.moon.ozmone.content.common;
 
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import org.moon.ozmone.content.block.AttachmentRailBlock;
-import org.moon.ozmone.content.block.ReflectorBlock;
+import org.moon.ozmone.content.common.block.AttachmentRailBlock;
+import org.moon.ozmone.content.common.block.ReflectorBlock;
 
 public class ModBlocks {
 

@@ -1,4 +1,4 @@
-package org.moon.ozmone.content.block;
+package org.moon.ozmone.content.common.block;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -15,12 +15,8 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-
-import static net.minecraft.state.property.Properties.FACING;
-
 
 public class ReflectorBlock extends WallMountedBlock {
 
@@ -28,13 +24,14 @@ public class ReflectorBlock extends WallMountedBlock {
 
     public ReflectorBlock() {
         super(FabricBlockSettings.copyOf(Blocks.REPEATER));
-        setDefaultState(getStateManager().getDefaultState().with(ROTATION, 0).with(FACE, WallMountLocation.FLOOR));
+        setDefaultState(getStateManager().getDefaultState().with(ROTATION, 0).with(FACE, WallMountLocation.FLOOR).with(FACING, Direction.NORTH));
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(ROTATION);
         builder.add(FACE);
+        builder.add(FACING);
         super.appendProperties(builder);
     }
 

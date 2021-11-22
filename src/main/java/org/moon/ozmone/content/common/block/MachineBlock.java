@@ -1,4 +1,4 @@
-package org.moon.ozmone.content.block;
+package org.moon.ozmone.content.common.block;
 
 import net.minecraft.block.Block;
 
