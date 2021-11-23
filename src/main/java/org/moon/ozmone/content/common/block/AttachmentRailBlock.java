@@ -64,7 +64,8 @@ public class AttachmentRailBlock extends AbstractRailBlock {
             if (cart != null) {
                 BlockState cartBlockState = Util.getMinecartBlock(cart);
                 if (powered && cartBlockState.isAir() && !aboveBlock.isAir() && cart instanceof MinecartEntity minecart) {
-                    if (!placeBlockInSpecialMinecart(minecart, aboveBlock, abovePos, world) && !PistonBlock.isMovable(aboveBlock, world, abovePos, Direction.UP, false, Direction.UP)) {
+                    if (!placeBlockInSpecialMinecart(minecart, aboveBlock, abovePos, world)) {
+                        //&& !PistonBlock.isMovable(aboveBlock, world, abovePos, Direction.UP, false, Direction.UP))
                         placeBlockInMinecart(minecart, aboveBlock, abovePos, world);
                     }
                 } else if (!powered && aboveBlock.isAir()) {
@@ -90,7 +91,6 @@ public class AttachmentRailBlock extends AbstractRailBlock {
 
         world.spawnEntity(containerMinecart);
     }
-
     public static boolean placeBlockInSpecialMinecart(MinecartEntity cart, BlockState state, BlockPos pos, World world) {
         if (state.isAir()) return false;
 
@@ -121,7 +121,6 @@ public class AttachmentRailBlock extends AbstractRailBlock {
         }
         return false;
     }
-
     public static void takeBlockFromMinecart(AbstractMinecartEntity cart, BlockPos pos, World world) {
         world.setBlockState(pos, Util.getMinecartBlock(cart));
         cart.setCustomBlock(Blocks.AIR.getDefaultState());
@@ -132,7 +131,6 @@ public class AttachmentRailBlock extends AbstractRailBlock {
 
         world.spawnEntity(minecart);
     }
-
     public static void takeBlockFromMinecartVariant(AbstractMinecartEntity cart, BlockPos pos, World world) {
         if (cart instanceof StorageMinecartEntity storageCart) {
             Inventory inv = null;
@@ -152,12 +150,11 @@ public class AttachmentRailBlock extends AbstractRailBlock {
                 inv = blockEntity;
             }
             if (inv != null) {
-                for(int i = 0; i < storageCart.size(); i++) {
-                    if (inv.size() > i) {
+                for (int i = 0; i < storageCart.size(); i++) {
+                    if (inv.size() < storageCart.size())
                         inv.setStack(i, storageCart.getStack(i));
-                    } else {
+                    else
                         dropStack(world, pos, storageCart.getStack(i));
-                    }
                 }
             }
         } else if (cart instanceof TntMinecartEntity) {
@@ -192,7 +189,7 @@ public class AttachmentRailBlock extends AbstractRailBlock {
 
     @Override
     public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
-        return (world.getBlockState(pos.up()).isAir()) ? 0 : (int) Math.min(state.getHardness(world, pos), 15);
+        return (world.getBlockState(pos.up()).isAir()) ? 0 : 1;
     }
 
     static {
